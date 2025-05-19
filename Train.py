@@ -2,6 +2,9 @@ import torch
 import torch.optim as optim
 from torch.distributions import Categorical
 from torch_geometric.data import Data
+import matplotlib.pyplot as plt
+import numpy as np
+import os
 
 from Gnn import GNN
 from PowerGridEnv import PowerGridEnv
@@ -17,6 +20,41 @@ def obs_to_data(obs, device=torch.device("cpu")):
 
     return Data(x=x, edge_index=edge_index, edge_attr=edge_attr, batch=batch)
 
+
+def plot_learning_curves(steps, rewards, losses=None, entropies=None):
+    """Plot and save learning curves."""
+    os.makedirs("plots", exist_ok=True)
+    
+    plt.figure(figsize=(12, 8))
+    
+    # Plot rewards
+    plt.subplot(2, 1, 1)
+    plt.plot(steps, rewards, 'b-', label='Average Reward (10 episodes)')
+    plt.xlabel('Training Steps')
+    plt.ylabel('Average Reward')
+    plt.title('Learning Curve - Rewards')
+    plt.grid(True)
+    plt.legend()
+    
+    # Plot loss and entropy if available
+    if losses and entropies:
+        # Create x-axis for update steps
+        update_steps = np.linspace(0, steps[-1], len(losses)) if steps else []
+        
+        plt.subplot(2, 1, 2)
+        plt.plot(update_steps, losses, 'r-', label='Loss')
+        plt.plot(update_steps, entropies, 'g-', label='Entropy')
+        plt.xlabel('Training Steps')
+        plt.ylabel('Value')
+        plt.title('Loss and Entropy')
+        plt.grid(True)
+        plt.legend()
+    
+    plt.tight_layout()
+    plt.savefig(f"plots/learning_curve_{len(steps)}.png")
+    plt.close()
+
+    
 
 class PPOAgent:
     def __init__(
@@ -183,13 +221,13 @@ class PPOAgent:
 
 
 if __name__ == "__main__":
-    device = torch.device("mps")
+    device = torch.device("cuda")
     env = PowerGridEnv(k=5)
 
     model = GNN(node_feat_dim=4, edge_feat_dim=5, hidden_dim=64, n_layers=3)
     agent = PPOAgent(model, lr=1e-3, gamma=0.99, lam=0.95, clip_eps=0.2)
 
-    max_steps = 100000
+    max_steps = 30000
     update_every = 256
     obs, _ = env.reset()
     trajectories = []
@@ -197,6 +235,12 @@ if __name__ == "__main__":
     best_reward = float("-inf")
     episode_rewards = []
     current_episode_reward = 0
+    
+    # Data for plotting
+    training_steps = []
+    avg_rewards = []
+    step_losses = []
+    step_entropies = []
 
     print(f"Starting training on device: {device}")
 
@@ -231,9 +275,20 @@ if __name__ == "__main__":
                 if current_episode_reward >= best_reward:
                     best_reward = current_episode_reward
 
+                # Store data for plotting
+                training_steps.append(total_steps)
+                if len(episode_rewards) >= 10:
+                    avg_rewards.append(sum(episode_rewards[-10:]) / 10)
+                else:
+                    avg_rewards.append(sum(episode_rewards) / len(episode_rewards))
+
                 if len(episode_rewards) % 100 == 0:
                     # Save latest model
                     torch.save(model.state_dict(), "best_power_grid_model.pt")
+                
+                if len(episode_rewards) % 1000 == 0:
+                    # Plot and save learning curve
+                    plot_learning_curves(training_steps, avg_rewards, step_losses, step_entropies)
 
                 # Reset for new episode
                 obs, _ = env.reset()
@@ -250,6 +305,11 @@ if __name__ == "__main__":
         if trajectories:  # Make sure we collected some data
             metrics = agent.update(trajectories)
             trajectories = []
+            
+            # Store metrics for plotting
+            step_losses.append(metrics['loss'])
+            step_entropies.append(metrics['entropy'])
+            
             print(
                 f"Step {total_steps}: Loss={metrics['loss']:.4f}, Policy={metrics['policy_loss']:.4f}, Value={metrics['value_loss']:.4f}, Entropy={metrics['entropy']:.4f}"
             )
@@ -257,3 +317,8 @@ if __name__ == "__main__":
     print("Training complete!")
     # Save final model
     torch.save(model.state_dict(), "final_power_grid_model.pt")
+    
+    # Final plot
+    plot_learning_curves(training_steps, avg_rewards, step_losses, step_entropies)
+
+

@@ -5,7 +5,7 @@ import pandapower.networks as pn
 from gymnasium import spaces
 import functools
 
-CASE_LIST = ["case14", "case30", "case39", "case57", "case118", "case300"]
+CASE_LIST = ["case14", "case30", "case39", "case57", "case300"]
 
 @functools.lru_cache(maxsize=128)
 def cached_powerflow(net_state):
@@ -227,7 +227,7 @@ class PowerGridEnv(gym.Env):
         bus_violation = np.sum(v_deviations ** 2) / len(bus_v)
 
         # Similar approach for line loading
-        loadings = self.net.res_line.loading_percent.values
+        loadings = self.net.res_line.loading_percent.values / 100.0  # normalize to 0-1 range
         l_deviations = np.maximum(0, loadings - self.max_loading)  # only count overloads
         line_violation = np.sum(l_deviations ** 2) / len(loadings)
 
@@ -262,7 +262,7 @@ class PowerGridEnv(gym.Env):
             reward = total_violation * spread_factor
 
         # Apply diminishing returns for each additional line removed
-        reward = reward * (0.95 ** (self.removed_count - 1))  # Less penalty for first line
+        reward = reward * (0.90 ** (self.removed_count - 1))  # Less penalty for first line
 
         # Episode done after collapse or k removals
         done = collapsed or (self.removed_count >= self.k)

@@ -1,0 +1,290 @@
+Starting training on device: mps
+Episode 10, Avg Reward (last 10): 5.88, Best: 10.63
+Episode 20, Avg Reward (last 10): 5.88, Best: 10.63
+Episode 30, Avg Reward (last 10): 11.18, Best: 34.27
+Episode 40, Avg Reward (last 10): 7.39, Best: 34.27
+Episode 50, Avg Reward (last 10): 7.90, Best: 34.27
+Step 256: Loss=16.2334, Policy=-5.8917, Value=22.2516, Entropy=2.5297
+Episode 60, Avg Reward (last 10): 8.63, Best: 34.27
+Episode 70, Avg Reward (last 10): 9.44, Best: 34.27
+Episode 80, Avg Reward (last 10): 7.89, Best: 34.27
+Episode 90, Avg Reward (last 10): 11.30, Best: 34.27
+Episode 100, Avg Reward (last 10): 7.35, Best: 34.27
+Episode 110, Avg Reward (last 10): 10.22, Best: 34.27
+Step 512: Loss=24.5747, Policy=-3.9764, Value=28.6765, Entropy=2.5096
+Episode 120, Avg Reward (last 10): 8.78, Best: 34.27
+Episode 130, Avg Reward (last 10): 10.84, Best: 34.27
+Episode 140, Avg Reward (last 10): 10.34, Best: 34.32
+Episode 150, Avg Reward (last 10): 10.58, Best: 34.32
+Episode 160, Avg Reward (last 10): 14.49, Best: 37.36
+Episode 170, Avg Reward (last 10): 10.54, Best: 37.36
+Step 768: Loss=40.6440, Policy=-4.9228, Value=45.6903, Entropy=2.4708
+Episode 180, Avg Reward (last 10): 10.31, Best: 37.36
+Episode 190, Avg Reward (last 10): 10.82, Best: 37.64
+Episode 200, Avg Reward (last 10): 9.18, Best: 37.64
+Episode 210, Avg Reward (last 10): 11.24, Best: 37.64
+Episode 220, Avg Reward (last 10): 9.67, Best: 37.64
+Episode 230, Avg Reward (last 10): 8.24, Best: 37.64
+Step 1024: Loss=39.9879, Policy=-2.8477, Value=42.9505, Entropy=2.2987
+Episode 240, Avg Reward (last 10): 12.03, Best: 37.64
+Episode 250, Avg Reward (last 10): 8.03, Best: 37.64
+Episode 260, Avg Reward (last 10): 12.40, Best: 37.64
+Episode 270, Avg Reward (last 10): 12.60, Best: 37.64
+Episode 280, Avg Reward (last 10): 13.06, Best: 37.64
+Episode 290, Avg Reward (last 10): 11.95, Best: 37.64
+Step 1280: Loss=42.8275, Policy=-3.6218, Value=46.5564, Entropy=2.1421
+Episode 300, Avg Reward (last 10): 13.85, Best: 37.64
+Episode 310, Avg Reward (last 10): 16.02, Best: 37.64
+Episode 320, Avg Reward (last 10): 11.27, Best: 37.64
+Episode 330, Avg Reward (last 10): 19.44, Best: 37.64
+Episode 340, Avg Reward (last 10): 7.93, Best: 37.64
+Episode 350, Avg Reward (last 10): 19.51, Best: 37.64
+Step 1536: Loss=49.8642, Policy=-4.8509, Value=54.8117, Entropy=1.9334
+Episode 360, Avg Reward (last 10): 14.59, Best: 37.64
+Episode 370, Avg Reward (last 10): 14.46, Best: 37.64
+Episode 380, Avg Reward (last 10): 17.53, Best: 37.64
+Episode 390, Avg Reward (last 10): 13.36, Best: 37.64
+Episode 400, Avg Reward (last 10): 19.49, Best: 37.64
+Episode 410, Avg Reward (last 10): 14.42, Best: 37.64
+Episode 420, Avg Reward (last 10): 17.25, Best: 37.64
+Step 1792: Loss=54.9190, Policy=-4.9697, Value=59.9811, Entropy=1.8475
+Episode 430, Avg Reward (last 10): 22.47, Best: 37.64
+Episode 440, Avg Reward (last 10): 22.62, Best: 37.64
+Episode 450, Avg Reward (last 10): 19.98, Best: 37.64
+Episode 460, Avg Reward (last 10): 15.11, Best: 37.64
+Episode 470, Avg Reward (last 10): 9.84, Best: 37.64
+Episode 480, Avg Reward (last 10): 17.68, Best: 37.64
+Episode 490, Avg Reward (last 10): 19.95, Best: 37.64
+Step 2048: Loss=64.3922, Policy=-5.2088, Value=69.6898, Entropy=1.7747
+Episode 500, Avg Reward (last 10): 21.70, Best: 37.64
+Episode 510, Avg Reward (last 10): 19.05, Best: 37.64
+Episode 520, Avg Reward (last 10): 14.30, Best: 37.64
+Episode 530, Avg Reward (last 10): 16.66, Best: 37.64
+Episode 540, Avg Reward (last 10): 17.13, Best: 37.64
+Episode 550, Avg Reward (last 10): 14.91, Best: 37.64
+Step 2304: Loss=56.9549, Policy=-1.5956, Value=58.6344, Entropy=1.6767
+Episode 560, Avg Reward (last 10): 20.24, Best: 37.64
+Episode 570, Avg Reward (last 10): 22.82, Best: 37.64
+Episode 580, Avg Reward (last 10): 19.59, Best: 37.64
+Episode 590, Avg Reward (last 10): 27.25, Best: 37.64
+Episode 600, Avg Reward (last 10): 16.45, Best: 37.64
+Episode 610, Avg Reward (last 10): 16.45, Best: 37.64
+Episode 620, Avg Reward (last 10): 14.48, Best: 37.64
+Step 2560: Loss=64.9934, Policy=-2.4051, Value=67.4805, Entropy=1.6399
+Episode 630, Avg Reward (last 10): 25.16, Best: 37.64
+Episode 640, Avg Reward (last 10): 23.66, Best: 37.64
+Episode 650, Avg Reward (last 10): 22.15, Best: 37.64
+Episode 660, Avg Reward (last 10): 24.89, Best: 37.64
+Episode 670, Avg Reward (last 10): 30.00, Best: 37.64
+Episode 680, Avg Reward (last 10): 26.03, Best: 37.64
+Episode 690, Avg Reward (last 10): 21.72, Best: 37.64
+Step 2816: Loss=75.5494, Policy=-6.6707, Value=82.2953, Entropy=1.5035
+Episode 700, Avg Reward (last 10): 35.11, Best: 37.64
+Episode 710, Avg Reward (last 10): 35.81, Best: 37.64
+Episode 720, Avg Reward (last 10): 25.60, Best: 37.64
+Episode 730, Avg Reward (last 10): 21.57, Best: 37.64
+Episode 740, Avg Reward (last 10): 27.93, Best: 37.64
+Episode 750, Avg Reward (last 10): 16.42, Best: 37.64
+Episode 760, Avg Reward (last 10): 28.60, Best: 37.64
+Step 3072: Loss=69.9047, Policy=-5.3481, Value=75.3207, Entropy=1.3568
+Episode 770, Avg Reward (last 10): 33.57, Best: 37.64
+Episode 780, Avg Reward (last 10): 28.40, Best: 37.64
+Episode 790, Avg Reward (last 10): 32.94, Best: 37.64
+Episode 800, Avg Reward (last 10): 35.16, Best: 37.64
+Episode 810, Avg Reward (last 10): 33.64, Best: 37.64
+Episode 820, Avg Reward (last 10): 36.03, Best: 37.64
+Episode 830, Avg Reward (last 10): 30.57, Best: 37.64
+Step 3328: Loss=43.5258, Policy=-8.0228, Value=51.6001, Entropy=1.0312
+Episode 840, Avg Reward (last 10): 36.76, Best: 37.64
+Episode 850, Avg Reward (last 10): 36.76, Best: 37.64
+Episode 860, Avg Reward (last 10): 34.36, Best: 37.64
+Episode 870, Avg Reward (last 10): 35.75, Best: 37.64
+Episode 880, Avg Reward (last 10): 36.45, Best: 37.64
+Episode 890, Avg Reward (last 10): 37.40, Best: 37.64
+Episode 900, Avg Reward (last 10): 37.00, Best: 37.64
+Episode 910, Avg Reward (last 10): 33.67, Best: 37.64
+Step 3584: Loss=14.1799, Policy=-7.1007, Value=21.3240, Entropy=0.8679
+Episode 920, Avg Reward (last 10): 36.45, Best: 37.64
+Episode 930, Avg Reward (last 10): 35.81, Best: 37.64
+Episode 940, Avg Reward (last 10): 37.34, Best: 37.64
+Episode 950, Avg Reward (last 10): 37.31, Best: 37.64
+Episode 960, Avg Reward (last 10): 36.73, Best: 37.64
+Episode 970, Avg Reward (last 10): 36.98, Best: 37.64
+Episode 980, Avg Reward (last 10): 36.36, Best: 37.64
+Episode 990, Avg Reward (last 10): 36.40, Best: 37.64
+Step 3840: Loss=0.4162, Policy=-3.7213, Value=4.1698, Entropy=0.6467
+Episode 1000, Avg Reward (last 10): 36.02, Best: 37.64
+Episode 1010, Avg Reward (last 10): 36.96, Best: 37.64
+Episode 1020, Avg Reward (last 10): 33.96, Best: 37.64
+Episode 1030, Avg Reward (last 10): 37.27, Best: 37.64
+Episode 1040, Avg Reward (last 10): 36.98, Best: 37.64
+Episode 1050, Avg Reward (last 10): 37.28, Best: 37.64
+Episode 1060, Avg Reward (last 10): 36.60, Best: 37.64
+Episode 1070, Avg Reward (last 10): 37.00, Best: 37.64
+Step 4096: Loss=3.2521, Policy=-1.4050, Value=4.6847, Entropy=0.5509
+Episode 1080, Avg Reward (last 10): 37.30, Best: 37.64
+Episode 1090, Avg Reward (last 10): 36.94, Best: 37.64
+Episode 1100, Avg Reward (last 10): 37.33, Best: 37.64
+Episode 1110, Avg Reward (last 10): 37.29, Best: 37.64
+Episode 1120, Avg Reward (last 10): 37.32, Best: 37.64
+Episode 1130, Avg Reward (last 10): 34.54, Best: 37.64
+Episode 1140, Avg Reward (last 10): 37.03, Best: 37.64
+Episode 1150, Avg Reward (last 10): 36.96, Best: 37.64
+Episode 1160, Avg Reward (last 10): 36.98, Best: 37.64
+Step 4352: Loss=3.5767, Policy=-0.5689, Value=4.1731, Entropy=0.5512
+Episode 1170, Avg Reward (last 10): 36.99, Best: 37.64
+Episode 1180, Avg Reward (last 10): 34.44, Best: 37.64
+Episode 1190, Avg Reward (last 10): 36.94, Best: 37.64
+Episode 1200, Avg Reward (last 10): 37.33, Best: 37.64
+Episode 1210, Avg Reward (last 10): 34.57, Best: 37.64
+Episode 1220, Avg Reward (last 10): 37.28, Best: 37.64
+Episode 1230, Avg Reward (last 10): 36.73, Best: 37.64
+Episode 1240, Avg Reward (last 10): 36.97, Best: 37.64
+Step 4608: Loss=10.7342, Policy=0.3497, Value=10.4130, Entropy=0.5691
+Episode 1250, Avg Reward (last 10): 37.33, Best: 37.64
+Episode 1260, Avg Reward (last 10): 37.31, Best: 37.64
+Episode 1270, Avg Reward (last 10): 34.57, Best: 37.64
+Episode 1280, Avg Reward (last 10): 37.29, Best: 37.64
+Episode 1290, Avg Reward (last 10): 37.36, Best: 37.64
+Episode 1300, Avg Reward (last 10): 36.94, Best: 37.64
+Episode 1310, Avg Reward (last 10): 37.28, Best: 37.64
+Episode 1320, Avg Reward (last 10): 36.69, Best: 37.64
+Step 4864: Loss=3.3736, Policy=-0.6633, Value=4.0590, Entropy=0.4417
+Episode 1330, Avg Reward (last 10): 37.35, Best: 37.64
+Episode 1340, Avg Reward (last 10): 37.43, Best: 37.64
+Episode 1350, Avg Reward (last 10): 37.40, Best: 37.64
+Episode 1360, Avg Reward (last 10): 37.34, Best: 37.64
+Episode 1370, Avg Reward (last 10): 37.35, Best: 37.64
+Episode 1380, Avg Reward (last 10): 37.30, Best: 37.64
+Episode 1390, Avg Reward (last 10): 37.34, Best: 37.64
+Episode 1400, Avg Reward (last 10): 36.95, Best: 37.64
+Episode 1410, Avg Reward (last 10): 37.33, Best: 37.64
+Step 5120: Loss=-0.3268, Policy=-0.4394, Value=0.1422, Entropy=0.5915
+Episode 1420, Avg Reward (last 10): 37.29, Best: 37.64
+Episode 1430, Avg Reward (last 10): 37.32, Best: 37.64
+Episode 1440, Avg Reward (last 10): 37.27, Best: 37.64
+Episode 1450, Avg Reward (last 10): 37.02, Best: 37.64
+Episode 1460, Avg Reward (last 10): 37.26, Best: 37.64
+Episode 1470, Avg Reward (last 10): 37.36, Best: 37.64
+Episode 1480, Avg Reward (last 10): 37.32, Best: 37.64
+Episode 1490, Avg Reward (last 10): 36.70, Best: 37.64
+Step 5376: Loss=0.3895, Policy=-0.0139, Value=0.4417, Entropy=0.7659
+Episode 1500, Avg Reward (last 10): 33.89, Best: 37.64
+Episode 1510, Avg Reward (last 10): 37.02, Best: 37.64
+Episode 1520, Avg Reward (last 10): 21.04, Best: 37.64
+Episode 1530, Avg Reward (last 10): 26.71, Best: 37.64
+Episode 1540, Avg Reward (last 10): 29.34, Best: 37.64
+Episode 1550, Avg Reward (last 10): 21.92, Best: 37.64
+Episode 1560, Avg Reward (last 10): 24.37, Best: 37.64
+Step 5632: Loss=116.8335, Policy=10.0837, Value=106.8128, Entropy=1.2591
+Episode 1570, Avg Reward (last 10): 26.86, Best: 37.64
+Episode 1580, Avg Reward (last 10): 12.09, Best: 37.64
+Episode 1590, Avg Reward (last 10): 17.64, Best: 37.64
+Episode 1600, Avg Reward (last 10): 17.57, Best: 37.64
+Episode 1610, Avg Reward (last 10): 17.95, Best: 37.64
+Episode 1620, Avg Reward (last 10): 20.02, Best: 37.64
+Episode 1630, Avg Reward (last 10): 19.81, Best: 37.64
+Step 5888: Loss=68.6575, Policy=5.9069, Value=62.8275, Entropy=1.5376
+Episode 1640, Avg Reward (last 10): 17.37, Best: 37.64
+Episode 1650, Avg Reward (last 10): 20.38, Best: 37.64
+Episode 1660, Avg Reward (last 10): 17.76, Best: 37.64
+Episode 1670, Avg Reward (last 10): 15.10, Best: 37.64
+Episode 1680, Avg Reward (last 10): 20.23, Best: 37.64
+Episode 1690, Avg Reward (last 10): 24.52, Best: 37.64
+Episode 1700, Avg Reward (last 10): 20.10, Best: 37.64
+Step 6144: Loss=66.3149, Policy=-0.7551, Value=67.1442, Entropy=1.4834
+Episode 1710, Avg Reward (last 10): 20.66, Best: 37.64
+Episode 1720, Avg Reward (last 10): 27.52, Best: 37.64
+Episode 1730, Avg Reward (last 10): 27.66, Best: 37.64
+Episode 1740, Avg Reward (last 10): 20.84, Best: 37.64
+Episode 1750, Avg Reward (last 10): 22.99, Best: 37.64
+Episode 1760, Avg Reward (last 10): 22.73, Best: 37.64
+Episode 1770, Avg Reward (last 10): 27.99, Best: 37.64
+Episode 1780, Avg Reward (last 10): 25.64, Best: 37.64
+Step 6400: Loss=65.2894, Policy=-5.3824, Value=70.7431, Entropy=1.4266
+Episode 1790, Avg Reward (last 10): 25.48, Best: 37.64
+Episode 1800, Avg Reward (last 10): 20.24, Best: 37.64
+Episode 1810, Avg Reward (last 10): 22.56, Best: 37.64
+Episode 1820, Avg Reward (last 10): 28.12, Best: 37.64
+Episode 1830, Avg Reward (last 10): 24.97, Best: 37.64
+Episode 1840, Avg Reward (last 10): 22.43, Best: 37.64
+Episode 1850, Avg Reward (last 10): 25.47, Best: 37.64
+Step 6656: Loss=71.4316, Policy=1.4941, Value=70.0055, Entropy=1.3572
+Episode 1860, Avg Reward (last 10): 25.30, Best: 37.64
+Episode 1870, Avg Reward (last 10): 27.57, Best: 37.64
+Episode 1880, Avg Reward (last 10): 25.59, Best: 37.64
+Episode 1890, Avg Reward (last 10): 17.38, Best: 37.64
+Episode 1900, Avg Reward (last 10): 22.88, Best: 37.64
+Episode 1910, Avg Reward (last 10): 17.49, Best: 37.64
+Episode 1920, Avg Reward (last 10): 22.31, Best: 37.64
+Episode 1930, Avg Reward (last 10): 28.06, Best: 37.64
+Step 6912: Loss=71.2108, Policy=0.7605, Value=70.5108, Entropy=1.2080
+Episode 1940, Avg Reward (last 10): 19.98, Best: 37.64
+Episode 1950, Avg Reward (last 10): 22.33, Best: 37.64
+Episode 1960, Avg Reward (last 10): 28.14, Best: 37.64
+Episode 1970, Avg Reward (last 10): 28.19, Best: 37.64
+Episode 1980, Avg Reward (last 10): 33.34, Best: 37.64
+Episode 1990, Avg Reward (last 10): 31.22, Best: 37.64
+Episode 2000, Avg Reward (last 10): 19.90, Best: 37.64
+Step 7168: Loss=65.2714, Policy=-3.4318, Value=68.7559, Entropy=1.0547
+Episode 2010, Avg Reward (last 10): 30.21, Best: 37.64
+Episode 2020, Avg Reward (last 10): 28.57, Best: 37.64
+Episode 2030, Avg Reward (last 10): 31.29, Best: 37.64
+Episode 2040, Avg Reward (last 10): 31.11, Best: 37.64
+Episode 2050, Avg Reward (last 10): 23.38, Best: 37.64
+Episode 2060, Avg Reward (last 10): 31.24, Best: 37.64
+Episode 2070, Avg Reward (last 10): 29.14, Best: 37.64
+Episode 2080, Avg Reward (last 10): 33.99, Best: 37.64
+Step 7424: Loss=57.9557, Policy=-3.4610, Value=61.4537, Entropy=0.7397
+Episode 2090, Avg Reward (last 10): 36.74, Best: 37.64
+Episode 2100, Avg Reward (last 10): 34.66, Best: 37.64
+Episode 2110, Avg Reward (last 10): 30.90, Best: 37.64
+Episode 2120, Avg Reward (last 10): 33.43, Best: 37.64
+Episode 2130, Avg Reward (last 10): 30.60, Best: 37.64
+Episode 2140, Avg Reward (last 10): 31.85, Best: 37.64
+Episode 2150, Avg Reward (last 10): 36.76, Best: 37.64
+Step 7680: Loss=30.0461, Policy=-3.5482, Value=33.6231, Entropy=0.5763
+Episode 2160, Avg Reward (last 10): 33.38, Best: 37.64
+Episode 2170, Avg Reward (last 10): 37.03, Best: 37.64
+Episode 2180, Avg Reward (last 10): 33.67, Best: 37.64
+Episode 2190, Avg Reward (last 10): 37.06, Best: 37.64
+Episode 2200, Avg Reward (last 10): 37.03, Best: 37.64
+Episode 2210, Avg Reward (last 10): 34.33, Best: 37.64
+Episode 2220, Avg Reward (last 10): 33.92, Best: 37.64
+Episode 2230, Avg Reward (last 10): 37.38, Best: 37.64
+Episode 2240, Avg Reward (last 10): 34.34, Best: 37.64
+Step 7936: Loss=16.0393, Policy=-2.3443, Value=18.4083, Entropy=0.4943
+Episode 2250, Avg Reward (last 10): 37.38, Best: 37.64
+Episode 2260, Avg Reward (last 10): 36.70, Best: 37.64
+Episode 2270, Avg Reward (last 10): 37.38, Best: 37.64
+Episode 2280, Avg Reward (last 10): 37.03, Best: 37.64
+Episode 2290, Avg Reward (last 10): 37.35, Best: 37.64
+Episode 2300, Avg Reward (last 10): 37.06, Best: 37.64
+Episode 2310, Avg Reward (last 10): 37.38, Best: 37.64
+Episode 2320, Avg Reward (last 10): 37.36, Best: 37.64
+Step 8192: Loss=-0.7420, Policy=-2.2801, Value=1.5641, Entropy=0.5203
+Episode 2330, Avg Reward (last 10): 37.38, Best: 37.64
+Episode 2340, Avg Reward (last 10): 37.37, Best: 37.64
+Episode 2350, Avg Reward (last 10): 37.05, Best: 37.64
+Episode 2360, Avg Reward (last 10): 37.03, Best: 37.64
+Episode 2370, Avg Reward (last 10): 34.64, Best: 37.64
+Episode 2380, Avg Reward (last 10): 34.64, Best: 37.64
+Episode 2390, Avg Reward (last 10): 37.37, Best: 37.64
+Episode 2400, Avg Reward (last 10): 37.04, Best: 37.64
+Step 8448: Loss=8.9468, Policy=-0.0130, Value=8.9701, Entropy=0.2070
+Episode 2410, Avg Reward (last 10): 37.41, Best: 37.64
+Episode 2420, Avg Reward (last 10): 37.40, Best: 37.64
+Episode 2430, Avg Reward (last 10): 37.41, Best: 37.64
+Episode 2440, Avg Reward (last 10): 37.41, Best: 37.64
+Episode 2450, Avg Reward (last 10): 37.41, Best: 37.64
+Episode 2460, Avg Reward (last 10): 37.41, Best: 37.64
+Episode 2470, Avg Reward (last 10): 37.40, Best: 37.64
+Episode 2480, Avg Reward (last 10): 37.39, Best: 37.64
+Episode 2490, Avg Reward (last 10): 36.77, Best: 37.64
+Step 8704: Loss=-0.3594, Policy=-0.6242, Value=0.2775, Entropy=0.2532
+Episode 2500, Avg Reward (last 10): 37.39, Best: 37.64
+Episode 2510, Avg Reward (last 10): 37.40, Best: 37.64
+Episode 2520, Avg Reward (last 10): 37.06, Best: 37.64
+Episode 2530, Avg Reward (last 10): 37.41, Best: 37.64
+Episode 2540, Avg Reward (last 10): 37.40, Best: 37.64
+Episode 2550, Avg Reward (last 10): 37.39, Best: 37.64
