@@ -269,13 +269,6 @@ class PowerGridEnv(gym.Env):
         return self._make_observation(), reward, done, False, info
 
     def load_state(self, obs):
-        """
-        Load environment state from an observation.
-        Used for tree-based search to explore multiple paths.
-        
-        Args:
-            obs (dict): Observation containing environment state
-        """
         # Copy the observation's internal state
         if "internal_state" in obs:
             # Get the removed lines from the internal state

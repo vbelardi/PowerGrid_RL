@@ -120,7 +120,6 @@ if __name__ == "__main__":
         if torch.backends.mps.is_available()
         else ("cuda" if torch.cuda.is_available() else "cpu")
     )
-    print(f"Using device: {device}")
 
     # Create environment and agent
     env = PowerGridEnv(k=5)

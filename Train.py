@@ -281,25 +281,11 @@ if __name__ == "__main__":
                     avg_rewards.append(sum(episode_rewards[-10:]) / 10)
                 else:
                     avg_rewards.append(sum(episode_rewards) / len(episode_rewards))
-
-                if len(episode_rewards) % 100 == 0:
-                    # Save latest model
-                    torch.save(model.state_dict(), "best_power_grid_model.pt")
                 
-                if len(episode_rewards) % 1000 == 0:
-                    # Plot and save learning curve
-                    plot_learning_curves(training_steps, avg_rewards, step_losses, step_entropies)
-
                 # Reset for new episode
                 obs, _ = env.reset()
                 current_episode_reward = 0
 
-                # Print progress every 10 episodes
-                if len(episode_rewards) % 10 == 0:
-                    avg_reward = sum(episode_rewards[-10:]) / 10
-                    print(
-                        f"Episode {len(episode_rewards)}, Avg Reward (last 10): {avg_reward:.2f}, Best: {best_reward:.2f}"
-                    )
 
         # Update policy
         if trajectories:  # Make sure we collected some data
@@ -310,11 +296,7 @@ if __name__ == "__main__":
             step_losses.append(metrics['loss'])
             step_entropies.append(metrics['entropy'])
             
-            print(
-                f"Step {total_steps}: Loss={metrics['loss']:.4f}, Policy={metrics['policy_loss']:.4f}, Value={metrics['value_loss']:.4f}, Entropy={metrics['entropy']:.4f}"
-            )
 
-    print("Training complete!")
     # Save final model
     torch.save(model.state_dict(), "final_power_grid_model.pt")
     
