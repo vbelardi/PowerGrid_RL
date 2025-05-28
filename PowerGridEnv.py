@@ -7,14 +7,6 @@ import functools
 
 CASE_LIST = ["case14", "case30", "case39", "case57", "case300"]
 
-@functools.lru_cache(maxsize=128)
-def cached_powerflow(net_state):
-    """Run powerflow with caching to avoid redundant calculations"""
-    # Convert the net to a hashable state representation
-    # This is difficult - we'd need to pickle/hash the pandapower network
-    # For now, we'll use a simpler approach
-    pass
-
 class PowerGridEnv(gym.Env):
     metadata = {"render_modes": ["human"]}
 
