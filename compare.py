@@ -15,12 +15,12 @@ import math
 from PowerGridEnv import PowerGridEnv
 from Gnn import GNN
 from Train import obs_to_data
-from vulnerability_finder import VulnerabilityFinder, find_model_top_vulnerabilities_comprehensive
+from vulnerability_finder import VulnerabilityFinder, find_model_top_vulnerabilities
 
 def get_available_cases():
     """Return a list of available pandapower case names, ordered by size"""
     # Standard cases
-    standard_cases = ["case300", "case1354pegase", "case1888rte", "case2848rte"]
+    standard_cases = ["case14", "case30", "case39", "case57", "case89pegase", "case118", "case300", "case1354pegase", "case1888rte", "case2848rte"]
     
     # Filter to only include cases that are available
     available_cases = []
@@ -256,7 +256,7 @@ def run_model_based(model_path, case_name, k, log_file, csv_file):
         
         # Run search with timing
         start_time = time.time()
-        model_vulnerabilities = find_model_top_vulnerabilities_comprehensive(
+        model_vulnerabilities = find_model_top_vulnerabilities(
             model_path, case_name, k, num_vulnerabilities=10
         )
         duration = time.time() - start_time
