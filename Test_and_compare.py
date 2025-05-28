@@ -220,7 +220,7 @@ def find_model_vulnerabilities(model_path, case_name, k=3):
         return []
     
     vulnerability_candidates.sort(key=lambda x: x['score'], reverse=True)
-    return vulnerability_candidates[:10]
+    return vulnerability_candidates[:5]
 
 def run_benchmark(cases=["case14", "case30", "case39", "case57"], model_path="best_power_grid_model.pt", k=3):
     timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -266,10 +266,10 @@ def run_benchmark(cases=["case14", "case30", "case39", "case57"], model_path="be
                 f.write(f"Duration: {exhaustive_time:.2f} seconds\n")
                 f.write(f"Found {len(exhaustive_vulns):,} total vulnerabilities\n\n")
                 
-                f.write(f"Top {min(10, len(exhaustive_vulns))} vulnerabilities:\n")
+                f.write(f"Top {min(5, len(exhaustive_vulns))} vulnerabilities:\n")
                 f.write("-" * 80 + "\n")
                 
-                for i, v in enumerate(exhaustive_vulns[:10]):
+                for i, v in enumerate(exhaustive_vulns[:5]):
                     status = "COLLAPSED" if v['collapsed'] else "ISLANDED" if v['islanded'] else "STRESSED"
                     lines_str = ", ".join(map(str, v['removed_lines']))
                     
@@ -300,7 +300,7 @@ def run_benchmark(cases=["case14", "case30", "case39", "case57"], model_path="be
             
             # Compare results
             if exhaustive_vulns and model_vulns:
-                exhaustive_sets = [frozenset(v['removed_lines']) for v in exhaustive_vulns[:10]]
+                exhaustive_sets = [frozenset(v['removed_lines']) for v in exhaustive_vulns[:5]]
                 model_sets = [frozenset(v['removed_lines']) for v in model_vulns]
                 
                 matches = []
@@ -315,7 +315,7 @@ def run_benchmark(cases=["case14", "case30", "case39", "case57"], model_path="be
                     f.write("-" * 80 + "\n")
                     
                     if matches:
-                        f.write(f"Model found {len(matches)} of the top 10 vulnerabilities:\n\n")
+                        f.write(f"Model found {len(matches)} of the top 5 vulnerabilities:\n\n")
                         
                         for model_idx, exh_idx, model_v, exh_v in matches:
                             f.write(f"Vulnerability #{exh_idx+1} from exhaustive search (rank #{model_idx+1} in model results)\n")
@@ -323,11 +323,11 @@ def run_benchmark(cases=["case14", "case30", "case39", "case57"], model_path="be
                             f.write(f"Exhaustive score: {exh_v['score']:.2f}, Model score: {model_v['score']:.2f}\n")
                             f.write("-" * 40 + "\n")
                     else:
-                        f.write("Model did not find any of the top 10 vulnerabilities.\n")
+                        f.write("Model did not find any of the top 5 vulnerabilities.\n")
         except Exception:
             continue
     
     return log_file
 
 if __name__ == "__main__":
-    run_benchmark(["case14", "case30", "case39", "case57"], "best_power_grid_model.pt", 3)
+    run_benchmark(["case14", "case30", "case39", "case57", "case89pegase"], "best_power_grid_model.pt", 3)
